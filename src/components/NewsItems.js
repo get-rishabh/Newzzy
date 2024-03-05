@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export class NewsItems extends Component {
   render() {
-    let { title, description, imageurl, newsurl } = this.props;
+    let { title, description, imageurl, newsurl, author, publishedAt  } = this.props;
     return (
       <>
         <div className="flex mx-auto w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
@@ -15,6 +15,9 @@ export class NewsItems extends Component {
             </h5>
             <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
               {description}
+            </p>            
+            <p className="block pt-4 font-sans text-xs font-light leading-relaxed text-inherit antialiased">
+              By {author} On {new Date(publishedAt).toGMTString()}
             </p>
           </div>
           <div className="p-6 pt-0">
