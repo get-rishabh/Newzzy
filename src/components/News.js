@@ -19,7 +19,7 @@ export default class extends Component {
     console.log("Hi, I'm a Constructor !!!");
     this.state = {
       articles: [],
-      loading: false,
+      loading: true,
       page : 1,
       totalResults : 0
     };
@@ -41,7 +41,7 @@ export default class extends Component {
       loading : false
     });
   }
-
+  
 
   fetchMoreData = async() => {
     this.setState({page : this.state.page + 1})
@@ -55,6 +55,8 @@ export default class extends Component {
       loading : false
     });
   };
+
+
 
   render() {
     return (
@@ -73,16 +75,16 @@ export default class extends Component {
           dataLength={this.state.articles.length !== this.state.totalResults}
           next={this.fetchMoreData}
           hasMore={true}
-          loader={<Spinner />}
+          loader={this.state.loading&&<Spinner />}
         >
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 300: 1, 700: 2, 1200: 3 }}
           >
             <Masonry columnsCount={3} gutter="2rem">
-              {this.state.articles.map((elem) => {
+              {this.state.articles.map((elem, index) => {
                 return (
                   <NewsItems
-                    key={elem.url}
+                    key={elem.url || index}
                     title={elem.title ? elem.title.slice(0, 48) : "No Title"}
                     description={
                       elem.description ? elem.description : "No Description"

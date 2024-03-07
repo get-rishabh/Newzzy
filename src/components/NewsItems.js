@@ -1,35 +1,40 @@
 import React, { Component } from "react";
+import Button from "./button";
 
 export class NewsItems extends Component {
   render() {
-    let { title, description, imageurl, newsurl, author, publishedAt  } = this.props;
+    let { title, description, imageurl, newsurl, author, publishedAt } =
+      this.props;
     return (
       <>
-        <div className="flex mx-auto w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md h-auto">
-          <div className="relative mx-4 mt-6 h-56  rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
-            <img src={imageurl} alt="img-blur-shadow" className="h-56 w-96" />
-          </div>
-          <div className="p-6">
-            <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-              {title}
-            </h5>
-            <p className="block font-sans text-base font-light leading-relaxed text-inherit antialiased">
-              {description}
-            </p>            
-            <p className="block pt-4 font-sans text-xs font-light leading-relaxed text-inherit antialiased">
-              By {author} On {new Date(publishedAt).toGMTString()}
-            </p>
-          </div>
-          <div className="p-6 pt-0">
-            <a href={newsurl} target="_blank" rel="noreferrer">
-              <button
-                className="select-none rounded-lg bg-pink-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-pink-500/20 transition-all hover:shadow-lg hover:shadow-pink-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                type="button"
-                data-ripple-light="true"
-              >
-                Read More
-              </button>
-            </a>
+        <div className="flex flex-col mx-auto w-96 overflow-hidden rounded-xl border border-gray-800 p-[1px] backdrop-blur-3xl">
+          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+          <div className="inline-flex items-center justify-center w-full h-full px-3 py-1 text-sm font-medium rounded-xl bg-gray-950 text-gray-50 backdrop-blur-3xl">
+            <div className="flex flex-col h-auto mx-auto text-gray-700 shadow-md w-96 rounded-xl bg-clip-border">
+              <div className="relative h-56 mx-4 mt-6 text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+                <img
+                  src={imageurl}
+                  alt="img-blur-shadow"
+                  className="z-50 h-56 w-96"
+                />
+              </div>
+              <div className="p-6">
+                <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-white">
+                  {title}
+                </h5>
+                <p className="block font-sans antialiased font-light leading-relaxed text-gray-400 text-inherit">
+                  {description}
+                </p>
+                <p className="block pt-4 font-sans text-xs antialiased font-light leading-relaxed text-gray-500 text-inherit">
+                  By {author} On {new Date(publishedAt).toGMTString()}
+                </p>
+              </div>
+              <div className="p-6 pt-0">
+                <a href={newsurl} target="_blank" rel="noreferrer">
+                  <Button />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </>
