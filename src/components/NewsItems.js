@@ -1,10 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import Button from "./button";
 
-export class NewsItems extends Component {
-  render() {
-    let { title, description, imageurl, newsurl, author, publishedAt } =
-      this.props;
+const NewsItems = (props) =>{
+    let { title, description, imageurl, newsurl, author, publishedAt } =  props;
     return (
       <>
         <div className="flex flex-col mx-auto w-96 overflow-hidden rounded-xl border border-gray-800 p-[1px] backdrop-blur-3xl">
@@ -39,7 +37,7 @@ export class NewsItems extends Component {
         </div>
       </>
     );
-  }
 }
+
 
 export default NewsItems;
