@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# **Newzzy : A News App**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This document outlines the functionality and technical aspects of a news application built using React.js, Tailwind CSS, and the News API.
 
-## Available Scripts
+> ### **Project Description :**
 
-In the project directory, you can run:
+This news application allows users to explore and discover news articles from various sources. It utilizes the News API to retrieve news data based on user preferences and displays it in a user-friendly interface.
 
-### `npm start`
+> ### **Technologies Used :**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Frontend:** React.js
+* **Styling:** Tailwind CSS
+* **News Data:** News API (Free Version)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> ### **Features :**
 
-### `npm test`
+* **Category-wise News:** Users can browse news articles categorized based on their interests. 
+* **Search Functionality:** Users can search for specific news articles using keywords. (Potentially)
+* **User Interface:** The application utilizes Tailwind CSS for a clean and responsive design.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> ### **Technical Details :**
 
-### `npm run build`
+* **React.js:** The application is built using React, a popular JavaScript library for building user interfaces. React components manage the application state and render the UI based on user interactions.
+* **Tailwind CSS:** Tailwind CSS provides utility classes for styling the application components. This allows for rapid development and a consistent design throughout the application.
+* **News API:** The free version of the News API is used to fetch news articles. Users can filter articles by keywords, category, language, and source. (Paid plans offer additional features and remove limitations)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> ### **Deployment Limitations :**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Unfortunately, due to limitations of the free tier News API plan, the application is not currently deployed. The free tier restricts access to news data unless the application is running on a local development server (localhost). Upgrading to a paid News API plan would allow for deployment to a public server.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> ### **Future Considerations :**
 
-### `npm run eject`
+* **Deployment:** Upgrading to a paid News API plan would enable deployment to a public server, making the application accessible to a wider audience.
+* **Authentication:** Implementing user authentication would allow for personalized news recommendations and potentially saved articles.
+* **Advanced Search:** Implementing a more advanced search functionality would allow users to filter articles by date, source, and other criteria.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+> ### **Conclusion :**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This news application demonstrates the use of React.js, Tailwind CSS, and the News API to create a user-friendly platform for exploring news articles. While deployment is currently limited due to the free tier API restrictions, the application has a strong foundation for further development and deployment with a paid API plan.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+> ### **Screenshots :**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://github.com/get-rishabh/Newzzy/assets/96688335/6d0060d3-2fe0-46d2-984b-b9d3bac0f27e)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+--- 
 
-### Code Splitting
+![image](https://github.com/get-rishabh/Newzzy/assets/96688335/875b73fb-afab-4914-92a3-6a58bf5f7783)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+![image](https://github.com/get-rishabh/Newzzy/assets/96688335/5bd70029-11f0-4937-b5ed-a0a841f07515)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
